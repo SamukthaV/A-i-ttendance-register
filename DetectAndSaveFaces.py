@@ -6,7 +6,7 @@ sampleNo=0
 cap = cv2.VideoCapture(0)
 while 1:
     ret, img = cap.read()
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)#convert the image to grayscale
     faces = face_cascade.detectMultiScale(gray, 1.32, 5)
     for (x,y,w,h) in faces:
         sampleNo=sampleNo+1
